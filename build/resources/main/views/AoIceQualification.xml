@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+    <grid name="ao-ice-grid" title="Ice" model="com.axelor.apps.aoFishing.db.IceQualification">
+        <field name="aoQuantity"/>
+        <field name="aoDescription"/>
+    </grid>
+
+
+    <form name="ao-ice-form" title="Ice" model="com.axelor.apps.aoFishing.db.IceQualification">
+        <panel name="IcePanel" title="Ice">
+            <field name="aoQuantity"/>
+            <field name="aoDescription"/>
+        </panel>
+    </form>
+
+
+</object-views>

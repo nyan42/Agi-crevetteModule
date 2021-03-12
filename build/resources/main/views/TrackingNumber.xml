@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+
+    <form name="tracking-number-form" title="Tracking Number" model="com.axelor.apps.stock.db.TrackingNumber"
+          extension="true" id="ao-tracking-number-extension-form-view">
+        <extend target="panel[@name='mainPanel']">
+            <insert position="after">
+                <panel name="FishingPanel" title="Fishing">
+                    <field name="isFishing"/>
+                </panel>
+           <!--     <panel name="IncludeFishingForm" showIf="isFishing">
+                    <field name="fishingList" showTitle="false"
+                           showIf="isFishing" colSpan="12"
+                           form-view="fishing-form" grid-view="fishing-grid"/>
+
+
+                </panel>
+ <panel-related name="productCompanyListPanel" field="productCompanyList" grid-view="product-company-grid" form-view="product-company-form" colSpan="12" hidden="true" onChange="save"/>
+showIf="isFishing" hidden="true
+                -->
+                <panel-related name="fishingListPanel" field="fishingList" grid-view="ao-fishing-trackingNumber-grid" form-view="ao-fishing-trackingNumber-form"  showIf="isFishing" hidden="true" colSpan="12" onChange="save"/>
+
+            </insert>
+        </extend>
+    </form>
+
+    <grid name="tracking-number-grid" title="Tracking Number Lines" id="ao-tracking-number-extension-grid-view"
+          model="com.axelor.apps.stock.db.TrackingNumber" extension="true">
+        <extend target="field[@name='perishableExpirationDate']">
+            <insert position="after">
+                <field name="isFishing"/>
+            </insert>
+        </extend>
+    </grid>
+
+</object-views>
