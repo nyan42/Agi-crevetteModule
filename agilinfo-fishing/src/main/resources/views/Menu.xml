@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+    <menuitem name="fishing-root" title="Fishing" order="-85"
+              icon="fa-apple" icon-background="#FF4500"/>
+
+    <menuitem name="fishing-root-fishing" title="Fishing" parent="fishing-root"
+              action="fishing.root.fishing" order="1"/>
+
+    <menuitem name="fishing-root-destination" title="Destination" parent="fishing-root"
+              action="fishing.root.destination" order="3"/>
+
+    <menuitem name="fishing-root-quality-bilan" title="Quality Bilan" parent="fishing-root"
+              action="fishing.root.qualityCheck" order="4"/>
+
+    <menuitem name="fishing-root-bacterio-test" title="Bacterio Test" parent="fishing-root"
+              action="fishing.root.bacteriotest" order="6"/>
+
+    <menuitem name="fishing-root-bacterio-test-type" title="Test Type" parent="fishing-root"
+              action="fishing.root.bacteriotest.type" order="8"/>
+
+        <menuitem name="fishing-root-color" title="Shrimp colors" parent="fishing-root"
+              action="fishing.root.color" order="9"/>
+
+    <menuitem name="fishing-root-ice" title="Ice" parent="fishing-root"
+              action="fishing.root.ice" order="10"/>
+
+    <action-view name="fishing.root.fishing" title="Fishing"
+                 model="com.axelor.apps.aoFishing.db.Fishing">
+        <view type="grid" name="ao-fishing-grid"/>
+        <view type="form" name="ao-fishing-form"/>
+    </action-view>
+
+    <action-view name="fishing.root.color" title="Shrimp colors"
+                 model="com.axelor.apps.aoFishing.db.Color">
+        <view type="grid" name="ao-color-grid"/>
+        <view type="form" name="ao-color-form"/>
+    </action-view>
+
+    <action-view name="fishing.root.destination" title="Destination"
+                 model="com.axelor.apps.aoFishing.db.Destination">
+        <view type="grid" name="ao-destination-grid"/>
+        <view type="form" name="ao-destination-form"/>
+    </action-view>
+
+    <action-view name="fishing.root.ice" title="Ice"
+                 model="com.axelor.apps.aoFishing.db.IceQualification">
+        <view type="grid" name="ao-ice-grid"/>
+        <view type="form" name="ao-ice-form"/>
+    </action-view>
+
+    <action-view name="fishing.root.bacteriotest" title="Bacterio test"
+                 model="com.axelor.apps.aoFishing.db.BacterioTest">
+        <view type="grid" name="ao-bacterio-test-grid"/>
+        <view type="form" name="ao-bacterio-test-form"/>
+    </action-view>
+
+    <action-view name="fishing.root.bacteriotest.type" title="Bacterio test type"
+                 model="com.axelor.apps.aoFishing.db.BacterioTestType">
+        <view type="grid" name="ao-bacterio-test-type-grid"/>
+        <view type="form" name="ao-bacterio-test-type-form"/>
+    </action-view>
+
+    <action-view name="fishing.root.qualityCheck" title="Quality Bilan"
+                 model="com.axelor.apps.aoFishing.db.QualityCheck">
+        <view type="grid" name="ao-quality-check-grid"/>
+        <view type="form" name="ao-quality-check-form"/>
+    </action-view>
+
+</object-views>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+    <grid name="ao-quality-check-grid" title="Quality check" model="com.axelor.apps.aoFishing.db.QualityCheck">
+        <field name="aoTrackingNumber" x-bind="{{code|unaccent|uppercase}}"/>
+        <field name="aoProductCode" colSpan="4"/>
+        <field name="aoGood"/>
+    </grid>
+
+
+    <form name="ao-quality-check-form" title="Quality check" model="com.axelor.apps.aoFishing.db.QualityCheck"
+          width="large">
+        <panel-tabs name="mainPanelTab">
+            <panel name="ShrimpPanel" title="Fishing">
+                <field name="aoTrackingNumber" title="Tracking Number" domain="self.isFishing = true" colSpan="4"/>
+                <field name="aoProductCode" title="Product code" colSpan="4"/>
+            </panel>
+
+            <panel name="DetailsPanel" title="Shrimp">
+
+                <field name="aoQuantity"/>
+                <field name="aoQuantityRemaining"/>
+
+                <field name="aoDehulling"/>
+                <field name="aoMelanose"/>
+                <field name="aoPoidsNet"/>
+                <field name="aoPoidsBrut"/>
+            </panel>
+
+            <panel name="DataPanel" title="Shrimp defected">
+                <field name="aoSoft" colSpan="3"/>
+                <field name="aoRawBurstHead" colSpan="3"/>
+                <field name="aoBroken" colSpan="3"/>
+                <field name="aoGreenPaws" colSpan="3"/>
+                <field name="aoGillsDefect" colSpan="3"/>
+                <!-- ? -->
+                <field name="aoScar" colSpan="3"/>
+                <field name="aoCookedBurstHead" colSpan="3"/>
+                <field name="aoCookDefect" colSpan="3"/>
+                <field name="aoDefectQuantity"/>
+
+            </panel>
+
+            <panel name="DataPanel" title="Good Shrimp">
+                <field name="aoCarto" colSpan="3"/>
+                <field name="aoRedHead" colSpan="3"/>
+                <field name="aoRedPaws" colSpan="3"/>
+                <field name="aoGood" colSpan="3"/>
+            </panel>
+            <panel name="DataPanel" title="Informations">
+
+                <field name="aoCaliber" colSpan="3"/>
+                <field name="aoUniformity" colSpan="2"/>
+                <field name="aoNumber"/>
+                <field name="aoObservation"/>
+
+            </panel>
+
+        </panel-tabs>
+
+    </form>
+
+
+</object-views>
