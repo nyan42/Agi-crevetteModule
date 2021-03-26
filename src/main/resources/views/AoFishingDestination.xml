@@ -4,14 +4,14 @@
               xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
 
     <grid name="ao-destination-grid" title="Destination" model="com.axelor.apps.aoFishing.db.Destination">
-        <field name="aoCodeCountry" title="Country Code" min="3" max="3" namecolumn="true"/>
+        <field name="aoCodeCountry" title="Country Code" min="3" max="3"/>
         <field name="aoLibelle" title="Libelle" namecolumn="true"/>
     </grid>
 
 
     <form name="ao-destination-form" title="Destination" model="com.axelor.apps.aoFishing.db.Destination">
         <panel name="DestinationPanel" title="Destination">
-            <field name="aoCodeCountry" title="Country Code" min="3" max="3" namecolumn="true"/>
+            <field name="aoCodeCountry" title="Country Code" min="3" max="3"/>
             <field name="aoLibelle" title="Libelle" namecolumn="true"/>
         </panel>
     </form>

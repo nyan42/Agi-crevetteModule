@@ -10,10 +10,6 @@
         <many-to-one name="aoBacterioTestType" title="Type" ref="com.axelor.apps.aoFishing.db.BacterioTestType"  />
         <string name="aoResult" title="Result" />
         <date name="aoDate" title="Date" />
-
-
-        <!-- <boolean name="isBlocked"/>         <many-to-one name="aoFishing" ref="com.axelor.apps.aoFishing.db.Fishing" />
--->
     </entity>
 
 </domain-models>

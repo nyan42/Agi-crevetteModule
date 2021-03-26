@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<domain-models xmlns="http://axelor.com/xml/ns/domain-models"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="http://axelor.com/xml/ns/domain-models http://axelor.com/xml/ns/domain-models/domain-models_5.3.xsd">
+
+    <module name="aoFishing" package="com.axelor.apps.aoFishing.db"/>
+
+    <entity name="QualityCheck" lang="java">
+        <many-to-one name="aoFishing" ref="com.axelor.apps.aoFishing.db.Fishing" title="Fishing number"
+                     required="true"/>
+
+        <many-to-many name="aoQualityCheckList" ref="com.axelor.apps.aoFishing.db.QualityCheckLine"
+                      title="Quality Check List"
+                      required="true"/>
+        <long name="aoQuantity" title="Quantity"/>
+        <string name="aoQuantityRemaining" title="Quantity remaining"/>
+
+        <decimal name="aoDehulling" title="Dehulling"/>
+        <decimal name="aoMelanose" title="Melanose"/>
+        <decimal name="aoPoidsNet" title="Net weight"/>
+        <decimal name="aoPoidsBrut" title="Brut weight"/>
+
+        <decimal name="aoSoft" title="Soft"/>
+        <decimal name="aoRawBurstHead" title="Raw burst head"/>
+        <decimal name="aoBroken" title="Broken"/>
+        <decimal name="aoGreenPaws" title="Green paws"/>
+        <decimal name="aoGillsDefect" title="Gills defect"/>
+        <decimal name="aoScar" title="Scar"/>
+        <decimal name="aoCookedBurstHead" title="Cooked burst head"/>
+        <decimal name="aoCookDefect" title="Cooked defect"/>
+        <decimal name="aoDefectQuantity" title="Defect quantity"/>
+
+        <decimal name="aoCarto" title="Carto"/>
+        <decimal name="aoRedHead" title="Red head"/>
+        <decimal name="aoRedPaws" title="Red paws"/>
+        <decimal name="aoGood" title="Good"/>
+
+        <long name="aoCaliber" title="Caliber"/>
+
+        <decimal name="aoUniformity" title="Uniformity"/>
+        <decimal name="aoNumber" title="Shrimp number"/>
+        <string name="aoObservation" title="Observation"/>
+
+    </entity>
+
+</domain-models>

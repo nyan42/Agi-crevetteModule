@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+
+    <form name="ao-quality-check-line-form" title="Quality Check Line"
+          model="com.axelor.apps.aoFishing.db.QualityCheckLine"
+          width="large">
+        <panel name="QualityCheckLinePanel" title="Quality Check Line Panel">
+            <field name="aoProductCode" domain="self.code LIKE 'CREVETTE%'" colSpan="8"/>
+            <field name="aoQuantity" colSpan="4"/>
+
+            <panel name="BacterioPanel" title="Bacterio tests" colSpan="12">
+                <field name="aoBacterio" colSpan="12"/>
+            </panel>
+            <field name="aoDestination" colSpan="6"/>
+
+        </panel>
+    </form>
+
+    <grid name="ao-quality-check-line-grid" title="Quality Check Line"
+          model="com.axelor.apps.aoFishing.db.QualityCheckLine">
+        <field name="aoProductCode" width="500"/>
+        <field name="aoQuantity"/>
+        <field name="aoBacterio"/>
+        <field name="aoDestination"/>
+
+    </grid>
+
+
+</object-views>

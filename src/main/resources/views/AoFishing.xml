@@ -4,11 +4,13 @@
               xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
 
     <grid name="ao-fishing-grid" title="Fishing" model="com.axelor.apps.aoFishing.db.Fishing">
-        <field name="aoTrackingNumber" x-bind="{{code|unaccent|uppercase}}"/>
+    <!--    <field name="aoTrackingNumber" x-bind="{{code|unaccent|uppercase}}"/> -->
+        <field name="aoID"/>
         <field name="aoFishingDate"/>
         <field name="aoColor" form-view="fishing-form" grid-view="fishing-grid"/>
         <field name="aoIce"/>
         <field name="aoGood"/>
+        <field name="aoBacterio"/>
     </grid>
 
 
@@ -16,7 +18,8 @@
           onSave="ao-fishing-time-validate-check-start-time-end-time, ao-fishing-time-validate-check-sampling-time-receiving-time">
         <panel-tabs name="mainPanelTab">
             <panel name="ShrimpPanel" title="Fishing">
-                <field name="aoTrackingNumber" domain="self.isFishing = true" colSpan="4"/>
+                <field name="aoID"/>
+
                 <field name="aoReceivingHour" requiredIf="aoSamplingHour"
                        onChange="ao-fishing-time-validate-check-sampling-time-receiving-time" colSpan="4"/>
                 <field name="aoSamplingHour" requiredIf="aoReceivingHour"
@@ -61,9 +64,6 @@
                 <field name="aoRedHeadStart" colSpan="3"/>
                 <field name="aoRedHead" colSpan="3"/>
                 <field name="aoRawBurstHead" colSpan="3"/>
-                <!--
-                <field name="aoCookedBurstHead" title="Cooked Burst Head"  colSpan="3"/>
-                -->
                 <field name="aoRedPaws" colSpan="3"/>
                 <field name="aoGreenPaws" colSpan="3"/>
                 <field name="aoSmallScar" colSpan="3"/>

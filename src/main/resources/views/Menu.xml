@@ -9,23 +9,30 @@
     <menuitem name="fishing-root-fishing" title="Fishing" parent="fishing-root"
               action="fishing.root.fishing" order="1"/>
 
-    <menuitem name="fishing-root-destination" title="Destination" parent="fishing-root"
-              action="fishing.root.destination" order="3"/>
-
     <menuitem name="fishing-root-quality-bilan" title="Quality Bilan" parent="fishing-root"
-              action="fishing.root.qualityCheck" order="4"/>
+              action="fishing.root.qualityCheck" order="2"/>
 
     <menuitem name="fishing-root-bacterio-test" title="Bacterio Test" parent="fishing-root"
-              action="fishing.root.bacteriotest" order="6"/>
+              action="fishing.root.bacteriotest" order="3"/>
 
-    <menuitem name="fishing-root-bacterio-test-type" title="Test Type" parent="fishing-root"
-              action="fishing.root.bacteriotest.type" order="8"/>
+    <menuitem name="fishing-root-config" parent="fishing-root" icon="fa-cog"
+              title="Configuration" order="4"/>
 
-        <menuitem name="fishing-root-color" title="Shrimp colors" parent="fishing-root"
-              action="fishing.root.color" order="9"/>
+    <menuitem name="fishing-root-destination" title="Destination" parent="fishing-root-config"
+              action="fishing.root.destination" order="1"/>
 
-    <menuitem name="fishing-root-ice" title="Ice" parent="fishing-root"
-              action="fishing.root.ice" order="10"/>
+    <menuitem name="fishing-root-color" title="Shrimp colors" parent="fishing-root-config"
+              action="fishing.root.color" order="2"/>
+
+    <menuitem name="fishing-root-ice" title="Ice" parent="fishing-root-config"
+              action="fishing.root.ice" order="3"/>
+
+    <menuitem name="fishing-root-bacterio-test-type" title="Test type" parent="fishing-root-config"
+              action="fishing.root.bacteriotest.type" order="4"/>
+
+
+    <menuitem name="fishing-quality-check-line" title="Quality check line" parent="fishing-root-config"
+              action="fishing.root.quality.check.line" order="5"/>
 
     <action-view name="fishing.root.fishing" title="Fishing"
                  model="com.axelor.apps.aoFishing.db.Fishing">
@@ -51,7 +58,7 @@
         <view type="form" name="ao-ice-form"/>
     </action-view>
 
-    <action-view name="fishing.root.bacteriotest" title="Bacterio test"
+    <action-view name="fishing.root.bacteriotest" title="Bacterio Test"
                  model="com.axelor.apps.aoFishing.db.BacterioTest">
         <view type="grid" name="ao-bacterio-test-grid"/>
         <view type="form" name="ao-bacterio-test-form"/>
@@ -69,4 +76,9 @@
         <view type="form" name="ao-quality-check-form"/>
     </action-view>
 
+    <action-view name="fishing.root.quality.check.line" title="Quality Check Line"
+                 model="com.axelor.apps.aoFishing.db.QualityCheckLine">
+        <view type="grid" name="ao-quality-check-line-grid"/>
+        <view type="form" name="ao-quality-check-line-form"/>
+    </action-view>
 </object-views>

@@ -14,11 +14,11 @@ axelor {
 }
 
 dependencies {
-    api project(":modules:axelor-project")
-    api project(":modules:axelor-business-project")
-    api project(":modules:axelor-bank-payment")
-    api project(":modules:axelor-human-resource")
-    //
+//    api project(":modules:axelor-project")
+//    api project(":modules:axelor-business-project")
+//    api project(":modules:axelor-bank-payment")
+//    api project(":modules:axelor-human-resource")
+//    //
     api project(":modules:axelor-stock")
     api project(":modules:axelor-quality")
 

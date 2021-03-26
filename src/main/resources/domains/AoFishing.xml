@@ -5,15 +5,13 @@
 
     <module name="aoFishing" package="com.axelor.apps.aoFishing.db"/>
 
-    <entity name="Fishing" lang="java">
-        <many-to-one name="aoTrackingNumber" ref="com.axelor.apps.stock.db.TrackingNumber" title="Tracking number"
-                     required="true"/>
+    <entity name="Fishing" sequential="true"  cacheable="true" lang="java">
+        <string name="aoID" title="Fishing ID" namecolumn="true" />
         <time name="aoSamplingHour" title="Sampling hour"/>
         <time name="aoReceivingHour" title="Receiving hour"/>
         <time name="aoFishingStartHour" title="Fishing start hour"/>
         <time name="aoFishingEndHour" title="Fishing end hour"/>
         <date name="aoFishingDate" title="Fishing date"/>
-
 
         <many-to-one name="aoIce" ref="com.axelor.apps.aoFishing.db.IceQualification" title="Ice"/>
 
@@ -48,10 +46,6 @@
         <decimal name="aoRedHeadStart" title="Red head start"/>
         <decimal name="aoRedHead" title="Red head"/>
         <decimal name="aoRawBurstHead" title="Raw burst head"/>
-        <!--
-            <decimal name="aoCookedBurstHead"/>
-            <decimal name="aoCookDefect"/>
-        -->
         <decimal name="aoRedPaws" title="Red paws"/>
         <decimal name="aoGreenPaws" title="Green paws"/>
         <decimal name="aoSmallScar" title="Small scar"/>
@@ -59,9 +53,7 @@
         <decimal name="aoDistorted" title="Distorted"/>
         <decimal name="aoBroken" title="Broken"/>
 
-        <boolean name="aoBatchStateCode" title="Batch state code"/> <!--boolean error -->
-        <!--
-                <many-to-many name="aoBacterio" ref="com.axelor.apps.aoFishing.db.BacterioTest"/> mappedBy="name"-->
+        <boolean name="aoBatchStateCode" title="Batch state code"/>
         <many-to-many name="aoBacterio" title="Bacterio test" ref="com.axelor.apps.aoFishing.db.BacterioTest"/>
 
 

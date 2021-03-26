@@ -7,7 +7,7 @@
 
     <entity name="Destination" lang="java">
         <string name="aoCodeCountry" title="Country Code" required="true"/>
-        <string name="aoLibelle" title="Libelle" required="true"/>
+        <string name="aoLibelle" title="Libelle" required="true" namecolumn="true" />
     </entity>
 
 </domain-models>

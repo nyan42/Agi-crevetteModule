@@ -7,7 +7,6 @@
 
     <entity name="BacterioTestType" lang="java">
         <string name="aoName" title="Name" namecolumn="true"/>
-
     </entity>
 
 </domain-models>

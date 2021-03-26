@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<domain-models xmlns="http://axelor.com/xml/ns/domain-models"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="http://axelor.com/xml/ns/domain-models http://axelor.com/xml/ns/domain-models/domain-models_5.3.xsd">
+
+    <module name="aoFishing" package="com.axelor.apps.aoFishing.db"/>
+
+    <entity name="QualityCheckLine" lang="java">
+
+        <many-to-one name="aoProductCode" ref="com.axelor.apps.base.db.Product" title="Product code"
+                     required="true"/>
+        <integer name="aoQuantity" title="Quantity"/>
+        <many-to-many name="aoBacterio" title="Bacterio test" ref="com.axelor.apps.aoFishing.db.BacterioTest"/>
+        <many-to-one name="aoDestination" ref="com.axelor.apps.aoFishing.db.Destination"/>
+
+    </entity>
+
+</domain-models>

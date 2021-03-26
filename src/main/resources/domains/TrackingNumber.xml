@@ -7,7 +7,5 @@
 
     <entity name="TrackingNumber" lang="java">
         <boolean name="isFishing" default="false"/>
-        <one-to-many name="fishingList" ref="com.axelor.apps.aoFishing.db.Fishing" title="Fishing list" mappedBy="aoTrackingNumber"/>
-
     </entity>
 </domain-models>
